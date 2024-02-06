@@ -1,0 +1,154 @@
+:root {
+  --Main-BG: hsl(233, 46%, 7%);
+  --Card-BG: hsl(246, 38%, 16%);
+  --Accent: hsl(277, 64%, 61%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Main-BG);
+  display: grid;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 24px;
+  place-content: center;
+}
+
+main {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card {
+  background-color: var(--Card-BG);
+  display: flex;
+  max-width: 1110px;
+  width: 100%;
+}
+
+.img-container {
+  order: 2;
+  position: relative;
+  width: 100%;
+}
+
+.img-container::after {
+  background-color: hsla(278, 95%, 25%, 0.55);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-container {
+  max-width: 570px;
+  order: 1;
+  padding: 72px 72px 64px 72px;
+  width: 100%;
+}
+
+.main-heading {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.main-paragraph {
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
+  margin-top: 25px;
+  opacity: 0.75;
+  padding-right: 34px;
+}
+
+.stats-container {
+  margin-top: 74px;
+}
+
+.stats {
+  display: inline-block;
+}
+
+.stats:nth-child(2) {
+  margin-left: 60px;
+}
+
+.stats:nth-child(3) {
+  margin-left: 56px;
+}
+
+.stats-count {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.stats-heading {
+  color: white;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin-top: 10px;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: var(--Accent);
+}
+
+@media screen and (max-width: 1200px) {
+  .card {
+    flex-direction: column;
+    max-width: 400px;
+  }
+
+  .img-container {
+    order: 1;
+  }
+
+  .content-container {
+    order: 2;
+    padding: 32px;
+  }
+
+  .main-heading {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .main-paragraph {
+    margin-top: 20px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .stats-container {
+    margin-top: 44px;
+  }
+
+  .stats {
+    display: block;
+    text-align: center;
+  }
+
+  .stats:nth-child(2),
+  .stats:nth-child(3) {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+}
