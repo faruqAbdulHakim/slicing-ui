@@ -1,0 +1,125 @@
+:root {
+  --Dark-cyan: #19a1ad;
+  --Desaturated-blue: hsl(229, 23%, 23%);
+  --Grayish-blue: hsl(227, 10%, 46%);
+  --Gray: hsl(185, 0%, 91%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg),
+    url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: left -305px top -530px, right -250px bottom -655px;
+  min-height: 100vh;
+  padding: 24px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+  margin: 150px auto 0 auto;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 50px 75px -25px rgba(0, 0, 0, 0.3);
+}
+
+.card-pattern {
+  display: block;
+  width: 100%;
+}
+
+.avatar {
+  display: block;
+  margin: -48px auto 0 auto;
+  border-radius: 50%;
+  outline: 5px solid white;
+}
+
+.header {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.header h1 {
+  color: var(--Desaturated-blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header .age {
+  color: var(--Grayish-blue);
+  font-size: 18px;
+}
+
+.address {
+  color: var(--Grayish-blue);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.line {
+  margin-top: 28px;
+  border-top: 1px solid var(--Gray);
+}
+
+.info-container {
+  margin-top: 25px;
+  margin-bottom: 24px;
+  padding-left: 28px;
+  padding-right: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-count {
+  color: var(--Desaturated-blue);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.info-type {
+  color: var(--Grayish-blue);
+  font-size: 12px;
+  margin-top: 8px;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-size: 700px;
+    background-position: left -250px top -450px, right -250px bottom -450px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-size: 500px;
+    background-position: left -150px top -350px, right -150px bottom -350px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  body {
+    background-size: 320px;
+    background-position: left -40px top -240px, right -40px bottom -240px;
+  }
+}
