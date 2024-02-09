@@ -13,7 +13,6 @@ body {
   background-color: var(--Light-Grayish-Blue);
   font-family: 'Manrope', sans-serif;
   font-weight: 500;
-  min-height: 800px;
   height: 100vh;
   padding: 74px 24px;
   display: flex;
