@@ -10,8 +10,12 @@
 }
 
 body {
+  background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
   font-family: 'League Spartan', sans-serif;
   padding: 60px 24px;
+  min-height: 100vh;
 }
 
 .heading > h1 {
@@ -140,6 +144,9 @@ q::after {
 
 @media screen and (min-width: 920px) {
   body {
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left, bottom 20px right;
     padding: 118px 40px 118px 40px;
     display: flex;
     justify-content: center;
