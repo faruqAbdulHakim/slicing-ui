@@ -1,0 +1,235 @@
+:root {
+  --Red: hsl(0, 100%, 74%) ;
+  --Green: hsl(154, 59%, 51%);
+  --Darker-Green: hsl(154, 57%, 46%);
+  --Blue: hsl(247, 32%, 48%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Gray: hsl(0, 0%, 87%);
+  --Darker-Gray: hsl(252, 2%, 45%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Red);
+  background-image: url(./images/bg-intro-desktop.png);
+  background-position: top left 15px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+header {
+  width: 100%;
+  max-width: 540px;
+  transform: translateY(4px);
+  margin-right: 30px;
+}
+
+header > h1 {
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 115%;
+}
+
+header > p {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.008em;
+  line-height: 165%;
+  margin-top: 30px;
+  max-width: 540px;
+}
+
+main {
+  width: 100%;
+  max-width: 540px;
+}
+
+main > h2 {
+  background-color: var(--Blue);
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px rgba(0, 0, 0, .2);
+  padding: 24px 24px 20px 24px;
+}
+
+main > h2 > span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+main > form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px rgba(0, 0, 0, .2);
+  padding: 40px 40px 45px 40px;
+  margin-top: 24px;
+}
+
+.input-container:not(:first-child) {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  outline: solid 1px var(--Gray);
+  border: none;
+  border-radius: 6px;
+  caret-color: var(--Blue);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 19px 0 16px 32px;
+}
+
+input:focus {
+  outline: solid 1px var(--Blue);
+}
+
+input::placeholder {
+  color: var(--Darker-Gray);
+  font-size: 14px;
+}
+
+.input-container.error {
+  position: relative;
+}
+
+.input-container.error::after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  background-image: url(./images/icon-error.svg);
+  background-repeat: no-repeat;
+}
+
+.input-container.error > input {
+  outline: solid 1px var(--Red);
+  position: relative;
+}
+
+.input-container.error > input::placeholder {
+  opacity: 0;
+}
+
+.input-container.error > .text-error {
+  display: block;
+}
+
+.text-error {
+  display: none;
+  color: var(--Red);
+  font-size: 14px;
+  margin-top: 6px;
+  margin-right: 3px;
+  text-align: right;
+}
+
+.submit-btn {
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.045em;
+  background-color: var(--Green);
+  margin-top: 20px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  box-shadow: 0 4px var(--Darker-Green);
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  filter: brightness(1.1);
+}
+
+main > form > p {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.001em;
+  margin-top: 21px;
+  text-align: center;
+}
+
+main > form > p > a {
+  color: var(--Red);
+  font-weight: 600;
+  letter-spacing: -0.0005;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1110px) {
+  body {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  header {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  header > h1 {
+    font-size: 36px;
+  }
+
+  header > p {
+    font-size: 15px;
+  }
+
+  main > h2 {
+    font-size: 14px;
+    line-height: 150%;
+    padding: 20px 10px 18px 10px;
+  }
+  
+  main > h2 > span {
+    font-size: 14px;
+  }
+
+  main > form {
+    padding: 24px 24px 28px 24px;
+    margin-top: 20px;
+  }
+
+  input {
+    font-size: 13px;
+    padding: 17px 0 14px 18px;
+  }
+
+  input::placeholder {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 12px;
+    background-color: var(--Green);
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 13px;
+    cursor: pointer;
+  }
+}
