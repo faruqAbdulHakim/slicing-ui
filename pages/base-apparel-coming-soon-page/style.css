@@ -1,0 +1,235 @@
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Desaturated-Red-\/50: hsla(0, 36%, 70%, 0.5);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Grayish-Red: hsl(0, 6%, 24%);
+  --Gradient-1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --Gradient-2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--Grayish-Red);
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(830px, 1440px) minmax(610px, auto);
+  min-height: 100vh;
+}
+
+.content-container {
+  background: url(./images/bg-pattern-desktop.svg), var(--Gradient-1);
+  background-size: 100% 100%;
+}
+
+.img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-container {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-170px, 1%);
+}
+
+.logo-container img {
+  width: 158px;
+}
+
+.heading {
+  display: block;
+  width: min-content;
+  margin: 74px auto 0 auto;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 17px;
+  line-height: 106%;
+  text-transform: uppercase;
+  transform: translate(-58px, 0);
+}
+
+.heading .thin {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+  line-height: 10px;
+}
+
+.main-text {
+  display: block;
+  width: 100%;
+  margin: 20px auto 0 auto;
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 175%;
+  transform: translate(-28px, 0);
+  color: var(--Desaturated-Red);
+}
+
+.input-container {
+  margin: 42px auto 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 440px;
+  max-height: 53px;
+  border-radius: 26px;
+  outline: solid 1px var(--Desaturated-Red-\/50);
+  transform: translate(-28px, 0);
+  display: flex;
+}
+
+.input-container.error {
+  outline: solid 2px var(--Soft-Red);
+}
+
+.input-container input {
+  flex: 1;
+  color: var(--Grayish-Red);
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  background: transparent;
+  border: none;
+}
+
+.input-container input::placeholder {
+  color: var(--Desaturated-Red-\/50);
+  opacity: 0.8;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container button {
+  padding: 0;
+  width: 92px;
+  background: var(--Gradient-2);
+  border: none;
+  border-radius: 26px;
+  position: relative;
+  z-index: 2;
+  transform: scale(1.075);
+  transform-origin: top 50% right 0;
+  box-shadow: 0 12px 28px 0 var(--Desaturated-Red-\/50);
+  cursor: pointer;
+  transition: all ease-in-out 200ms;
+}
+
+.input-container button:hover {
+  filter: brightness(1.2);
+}
+
+.input-container.error ~ .text-error {
+  display: block;
+}
+
+.text-error {
+  display: none;
+  width: max-content;
+  color: var(--Soft-Red);
+  margin: 12px auto 0 auto;
+  font-size: 16px;
+  transform: translate(-120px, 0);
+}
+
+@media screen and (max-width: 1366px) {
+  main {
+    grid-template-columns: auto 480px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  main {
+    grid-template-columns: auto 450px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: unset;
+  }
+
+  .logo-container,
+  .heading,
+  .main-text,
+  .input-container,
+  .text-error {
+    transform: translate(0, 0);
+  }
+
+  .logo-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: min-content;
+    padding: 25px 0 26px 32px;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .img-container {
+    grid-row: 1 / 2;
+    max-height: 580px;
+    margin-top: 84px;
+  }
+
+  .img-container > img {
+    object-position: top;
+  }
+
+  .content-container {
+    grid-row: 2 / 3;
+    background: none;
+    padding-bottom: 80px;
+  }
+
+  .heading {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  .main-text {
+    margin-top: 20px;
+    padding: 0 28px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .input-container {
+    max-width: 320px;
+    max-height: 48px;
+  }
+
+  .input-container input {
+    font-size: 14px;
+  }
+
+  .text-error {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .img-container {
+    max-height: 420px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .img-container {
+    max-height: 250px;
+  }
+}
