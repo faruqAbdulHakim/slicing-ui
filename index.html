@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="authors" content="Faruq Abdul Hakim">
+  <meta name="color-scheme" content="light only">
+  <link rel="stylesheet" href="./global/assets/styles/css-reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500;600&display=swap" rel="stylesheet">
+  <title>Slicing UI</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body
+  x-data="{
+    solutions: [
+      {
+        name: 'QR Code Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/qr-code-component/preview.jpg',
+        html: './pages/qr-code-component/index.html'
+      },
+      {
+        name: 'NFT Preview Card Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/nft-preview-card-component/preview.jpg',
+      },
+      {
+        name: 'Order Summary Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/order-summary-component/preview.jpg',
+      },
+      {
+        name: 'NFT Preview Card Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/nft-preview-card-component/preview.jpg',
+      },
+      {
+        name: 'Stats Preview Card Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/stats-preview-card-component/preview.jpg',
+      },
+      {
+        name: '3-Column Preview Card Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/three-column-preview-card-component/preview.jpg',
+      },
+      {
+        name: 'FAQ Accordion Card',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/faq-accordion-card/preview.jpg',
+      },
+      {
+        name: 'Profile Card Component',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/profile-card-component/preview.jpg',
+      },
+      {
+        name: 'Social Proof Section',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/social-proof-section/preview.jpg',
+      },
+      {
+        name: 'Four Card Feature Section',
+        tags: ['HTML', 'CSS'],
+        level: 1,
+        preview: './pages/four-card-feature-section/preview.jpg',
+      },
+      {
+        name: 'Article Preview Component',
+        tags: ['HTML', 'CSS', 'JS'],
+        level: 1,
+        preview: './pages/article-preview-component/preview.jpg',
+      },
+      {
+        name: 'Intro Component with Sign Up Form',
+        tags: ['HTML', 'CSS', 'JS'],
+        level: 1,
+        preview: './pages/intro-component-with-signup-form/preview.jpg',
+      },
+      {
+        name: 'Base Apparel Coming Soon Page',
+        tags: ['HTML', 'CSS', 'JS'],
+        level: 1,
+        preview: './pages/base-apparel-coming-soon-page/preview.jpg',
+      },
+    ]
+  }"
+>
+  <main>
+    <template x-for="solution in solutions.reverse()">
+      <div class="card">
+        <div class="img-container">
+          <template x-if="solution.preview !== undefined">
+            <img :src="solution.preview" :alt="solution.name">
+          </template>
+          <template x-if="solution.preview === undefined">
+            <p>Preview not available</p>
+          </template>
+        </div>
+        <div class="card-content">
+          <a :href="solution.html" target="_blank" rel="noreferrer" class="solution-link">
+            <p x-text="solution.name"></p>
+            <box-icon name='link-external'></box-icon>
+          </a>
+          <div class="tags-container">
+            <template x-if="solution.tags.some((tag) => tag === 'HTML')">
+              <p class="html-tag">HTML</p>
+            </template>
+            <template x-if="solution.tags.some((tag) => tag === 'CSS')">
+              <p class="css-tag">CSS</p>
+            </template>
+            <template x-if="solution.tags.some((tag) => tag === 'JS')">
+              <p class="js-tag">JS</p>
+            </template>
+            <template x-if="solution.tags.some((tag) => tag === 'API')">
+              <p class="api-tag">API</p>
+            </template>
+          </div>
+        </div>
+      </div>
+    </template>
+  </main>
+</body>
+</html>
