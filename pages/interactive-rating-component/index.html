@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light only" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../global/assets/favicon/favicon-32x32.png" />
+    <link rel="stylesheet" href="../../global/assets/styles/css-reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <title>Slicing UI | Interactive rating component</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+  <body>
+
+    <main x-data="{
+      state: 0,
+      selectedOption: 0,
+    }"
+    >
+      <!-- State Input -->
+      <template x-if="state === 0">
+        <div class="card">
+          <div class="star-img">
+            <img src="./images/icon-star.svg" alt="Star" aria-hidden="true" />
+          </div>
+          <h1 class="heading">How did we do?</h1>
+          <p class="paragraph">
+            Please let us know how we did with your support request. All feedback
+            is appreciated to help us improve our offering!
+          </p>
+          <div class="options">
+            <button
+              class="option"
+              type="button"
+              @click="selectedOption = 1"
+              :class="selectedOption === 1 && 'active'"
+            >
+              1
+            </button>
+            <button
+              class="option"
+              type="button"
+              @click="selectedOption = 2"
+              :class="selectedOption === 2 && 'active'"
+            >
+              2
+            </button>
+            <button
+              class="option"
+              type="button"
+              @click="selectedOption = 3"
+              :class="selectedOption === 3 && 'active'"
+            >
+              3
+            </button>
+            <button
+              class="option"
+              type="button"
+              @click="selectedOption = 4"
+              :class="selectedOption === 4 && 'active'"
+            >
+              4
+            </button>
+            <button
+              class="option"
+              type="button"
+              @click="selectedOption = 5"
+              :class="selectedOption === 5 && 'active'"
+            >
+              5
+            </button>
+          </div>
+          <button class="submit-btn" type="button" @click="state=1">Submit</button>
+        </div>
+      </template>
+
+      <template x-if="state === 1">
+        <div class="card" x-transition>
+          <div class="illustration-img">
+            <img src="./images/illustration-thank-you.svg" alt="Illustration">
+          </div>
+          <p class="selected-rating" x-text="`You selected ${selectedOption} out of 5`"></p>
+          <h1 class="heading text-center">Thank you!</h1>
+          <p class="paragraph text-center">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!
+          </p>
+        </div>
+      </template>
+
+    </main>
+
+  </body>
+</html>
