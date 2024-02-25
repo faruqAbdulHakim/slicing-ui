@@ -285,9 +285,3 @@ body {
     margin: 40px 0 0 0;
   }
 }
-
-@media screen and (min-width: 1440px) {
-  body {
-    min-height: max(1080px, 100vh);
-  }
-}
