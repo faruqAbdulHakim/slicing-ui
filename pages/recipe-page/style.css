@@ -1,0 +1,210 @@
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --Rose-White: hsl(323, 100%, 98%);
+  --Eggshell: hsl(29, 53%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: white;
+  background-color: var(--Nutmeg);
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  color: var(--Wenge-Brown);
+  background-color: var(--Eggshell);
+}
+
+main {
+  max-width: 738px;
+  margin-inline: auto;
+  background-color: white;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+hr {
+  border-top: none;
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+ul,
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 24px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol li::marker {
+  font: inherit;
+  font-weight: 700;
+  color: var(--Nutmeg);
+}
+
+ul li,
+ol li {
+  padding-left: 16px;
+  line-height: 1.5;
+  position: relative;
+}
+
+ul li::before {
+  content: '.';
+  position: absolute;
+  font-size: 32px;
+  top: 50%;
+  left: 0;
+  transform: translate(-200%, -70%);
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+td {
+  padding: 15px 32px;
+  line-height: 1.1;
+}
+
+td:first-child {
+  width: 42%;
+}
+
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+.mt-xs {
+  margin-top: 12px;
+}
+
+.mt-sm {
+  margin-top: 16px;
+}
+
+.mt {
+  margin-top: 24px;
+}
+
+.mt-lg {
+  margin-top: 32px;
+}
+
+.text-nutmeg {
+  color: var(--Nutmeg);
+}
+
+.text-raspberry {
+  color: var(--Dark-Raspberry);
+}
+
+.text-brown {
+  color: var(--Wenge-Brown);
+}
+
+.text-dark {
+  color: var(--Dark-Charcoal);
+}
+
+.font-sans {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Young Serif', serif;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.text-2xl {
+  font-size: 36px;
+}
+
+.text-xl {
+  font-size: 28px;
+}
+
+.text-lg {
+  font-size: 20px;
+}
+
+article {
+  padding: 40px 32px;
+}
+
+.section-1 aside {
+  background-color: var(--Rose-White);
+  padding: 24px 22px;
+  border-radius: 12px;
+}
+
+.section-1 aside ul li::before {
+  color: var(--Dark-Raspberry);
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    padding: 32px;
+    min-height: max(100vh, 1955px);
+    display: flex;
+    align-items: center;
+  }
+
+  main {
+    padding: 40px 40px 0 40px;
+    border-radius: 24px;
+  }
+
+  td:first-child {
+    width: 46.2%;
+  }
+
+  .omelete-img {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  article {
+    padding: 40px 2px 28px 2px;
+  }
+
+  .text-2xl {
+    font-size: 40px;
+  }
+
+  .section-1 aside {
+    padding: 26px;
+  }
+}
