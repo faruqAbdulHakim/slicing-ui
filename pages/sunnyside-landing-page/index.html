@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Faruq Abdul Hakim">
+  <meta name="color-scheme" content="light only">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../global/assets/favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="../../global/assets/styles/css-reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <title>Slicing UI | Sunnyside agency landing page</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo-img" href="#">
+        <img src="./images/logo.svg" alt="logo" />
+      </a>
+      <!-- Desktop Menu -->
+      <div class="desktop-menu">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <label for="menu-open" aria-label="Show the menu">
+          <i class="bx bx-menu"></i>
+        </label>
+        <input type="checkbox" id="menu-open" />
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="title">We are creatives</h1>
+    <button type="button" class="see-content-btn" aria-label="See Content">
+      <img src="./images/icon-arrow-down.svg" alt="Arrow down" aria-hidden="true" />
+    </button>
+  </header>
+
+  <main>
+    <section class="section-1">
+      <img src="./images/image-transform.jpg" alt="Transform" />
+      <div>
+        <h2 class="subtitle">Transform your brand</h2>
+        <p>
+          We are a full-service creative agency specializing in helping brands grow fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.
+        </p>
+        <button type="button" class="learn-more-btn">
+          Learn more
+        </button>
+      </div>
+    </section>
+    <section class="section-2">
+      <img src="./images/image-stand-out.jpg" alt="Stand Out" />
+      <div>
+        <h2 class="subtitle">Stand out to the right audience</h2>
+        <p>
+          Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.
+        </p>
+        <button type="button" class="learn-more-btn">
+          Learn more
+        </button>
+      </div>
+    </section>
+    <div class="section-3-4-container">
+      <section class="section-3">
+        <div class="wrapper">
+          <h2 class="subtitle">Graphic Design</h2>
+          <p>Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.</p>
+        </div>
+      </section>
+      <section class="section-4">
+        <div class="wrapper">
+          <h2 class="subtitle">Photography</h2>
+          <p>Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
+        </div>
+      </section>
+    </div>
+    <section class="section-5">
+      <h2 class="subtitle">Client testimonials</h2>
+      <div class="testi">
+        <div class="testi-item">
+          <img class="avatar" src="./images/image-emily.jpg" alt="Emily" />
+          <p class="testi-content">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.</p>
+          <p class="testi-name">Emily R.</p>
+          <p class="testi-position">Marketing Director</p>
+        </div>
+        <div class="testi-item">
+          <img class="avatar" src="./images/image-thomas.jpg" alt="Thomas" />
+          <p class="testi-content">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+          <p class="testi-name">Thomas S.</p>
+          <p class="testi-position">Chief Operating Officer</p>
+        </div>
+        <div class="testi-item">
+          <img class="avatar" src="./images/image-jennie.jpg" alt="Jennie" />
+          <p class="testi-content">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+          <p class="testi-name">Jennie F.</p>
+          <p class="testi-position">Business Owner</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="gallery">
+      <img src="./images/image-gallery-milkbottles.jpg" alt="milk bottless"/>
+      <img src="./images/image-gallery-orange.jpg" alt="orange"/>
+      <img src="./images/image-gallery-cone.jpg" alt="cone"/>
+      <img src="./images/image-gallery-sugarcubes.jpg" alt="sugar cubes"/>
+    </div>
+    <p class="footer-logo">sunnyside</p>
+    <nav>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+    </nav>
+    <div class="contacts">
+      <a href="#"><i class="bx bxl-facebook-square"></i></a>
+      <a href="#"><i class="bx bxl-instagram"></i></a>
+      <a href="#"><i class="bx bxl-twitter"></i></a>
+      <a href="#"><i class="bx bxl-pinterest"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
