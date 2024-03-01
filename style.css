@@ -8,7 +8,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-content: center;
   gap: 24px;
   max-width: 1440px;
@@ -21,6 +21,11 @@ main {
   overflow: hidden;
   box-shadow: 0 16px 16px -8px rgba(50, 50, 150, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 300ms;
+}
+
+.card:hover {
+  transform: scale(1.025);
 }
 
 .img-container {
@@ -37,11 +42,6 @@ main {
   width: 100%;
   object-fit: cover;
   transform: scale(1.5);
-  transition: all ease-in-out 400ms;
-}
-
-.card:hover img {
-  transform: scale(1.6);
 }
 
 .card-content {
@@ -57,25 +57,6 @@ main {
   line-height: 120%;
   text-decoration: none;
   color: inherit;
-}
-
-.solution-link:hover,
-.solution-link:focus {
-  text-decoration: underline;
-}
-
-.solution-link:visited {
-  color: inherit;
-}
-
-.solution-link p {
-  display: inline;
-}
-
-.solution-link box-icon {
-  vertical-align: middle;
-  width: 16px;
-  fill: hsl(240, 11%, 26%);
 }
 
 .tags-container {
