@@ -143,16 +143,23 @@ export const getSolutionList = () => {
     {
       name: 'Sunnyside Landing Page',
       tags: ['HTML', 'CSS'],
-      level: 1,
+      level: 2,
       preview: './pages/sunnyside-landing-page/preview.jpg',
       html: './pages/sunnyside-landing-page/index.html',
     },
     {
       name: 'Advice Generator App',
       tags: ['HTML', 'CSS', 'JS', 'API'],
-      level: 1,
+      level: 2,
       preview: './pages/advice-generator-app/preview.jpg',
       html: './pages/advice-generator-app/index.html',
+    },
+    {
+      name: 'Notifications Page',
+      tags: ['HTML', 'CSS', 'JS'],
+      level: 2,
+      preview: './pages/notifications-page/preview.jpg',
+      html: './pages/notifications-page/index.html',
     },
   ];
 };
