@@ -7,6 +7,7 @@
   --Grayish-blue: hsl(219, 14%, 63%);
   --Dark-grayish-blue: hsl(219, 12%, 42%);
   --Dark-blue: hsl(224, 21%, 14%);
+  --bg: hsl(228, 71%, 98%);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   color: var(--Dark-blue);
-  background-color: var(--Light-grayish-blue-1);
+  background-color: var(--bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,6 +188,7 @@ header button:hover {
 
 @media screen and (min-width: 960px) {
   body {
+    min-height: max(100dvh, 991px);
     padding: 32px;
   }
 
